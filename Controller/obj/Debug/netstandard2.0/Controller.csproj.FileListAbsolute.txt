@@ -1,0 +1,11 @@
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\bin\Debug\netstandard2.0\Controller.deps.json
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\bin\Debug\netstandard2.0\Controller.dll
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\bin\Debug\netstandard2.0\Controller.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\bin\Debug\netstandard2.0\Model.dll
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\obj\Debug\netstandard2.0\Controller.csprojAssemblyReference.cache
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\obj\Debug\netstandard2.0\Controller.AssemblyInfoInputs.cache
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\obj\Debug\netstandard2.0\Controller.AssemblyInfo.cs
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\obj\Debug\netstandard2.0\Controller.csproj.CopyComplete
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\obj\Debug\netstandard2.0\Controller.dll
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Controller\obj\Debug\netstandard2.0\Controller.pdb
