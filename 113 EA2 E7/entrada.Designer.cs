@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿namespace _113_EA2_E7
 {
-    partial class principal
+    partial class entrada
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // principal
+            // entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "principal";
+            this.ClientSize = new System.Drawing.Size(530, 370);
+            this.Name = "entrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
+            this.Text = "Entrada";
             this.ResumeLayout(false);
 
         }
@@ -45,4 +45,3 @@
         #endregion
     }
 }
-

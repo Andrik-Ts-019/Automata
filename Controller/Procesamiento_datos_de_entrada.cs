@@ -4,5 +4,6 @@ namespace Controller
 {
     public class Controlador
     {
+        String Nombre;
     }
 }
