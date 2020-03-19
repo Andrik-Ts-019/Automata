@@ -1,0 +1,4 @@
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Model\bin\Debug\Model.dll
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Model\bin\Debug\Model.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Model\obj\Debug\Model.dll
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\Model\obj\Debug\Model.pdb

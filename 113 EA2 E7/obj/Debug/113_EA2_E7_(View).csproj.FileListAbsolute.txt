@@ -1,0 +1,13 @@
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\113_EA2_E7_(View).csprojAssemblyReference.cache
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\_113_EA2_E7.entrada.resources
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\_113_EA2_E7.Properties.Resources.resources
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\WindowsFormsApp1.principal.resources
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\113_EA2_E7_(View).csproj.GenerateResource.cache
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\113 EA2 E7.exe
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\113 EA2 E7.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\bin\Debug\113 EA2 E7.exe.config
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\bin\Debug\113 EA2 E7.exe
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\bin\Debug\113 EA2 E7.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\bin\Debug\Controller.dll
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\bin\Debug\Controller.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\113 EA2 E7\obj\Debug\113_EA2_E7_(View).csproj.CopyComplete
