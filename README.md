@@ -11,10 +11,9 @@
 ## Requisitos ##
 
 Para una mayor facilidad abrir en Visual Studio
+
 * * *
-
 ## Descripción ##
-
 * * *
 ##### Entrada #####
 Nombre completo y matricula
