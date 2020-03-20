@@ -1,0 +1,9 @@
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\bin\Debug\View.exe.config
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\bin\Debug\View.exe
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\bin\Debug\View.pdb
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\obj\Debug\View.Principal.resources
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\obj\Debug\View.exe
+C:\Users\Samsung\Documents\Pruebas\C#\C# con Interfaz de usuario\113 EA2 E7\View\obj\Debug\View.pdb
