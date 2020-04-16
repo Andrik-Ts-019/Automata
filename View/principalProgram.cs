@@ -8,15 +8,14 @@ namespace View
 {
     static class principalProgram
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
+            string Nombre = "Pablo Sebastian Ruiz Gallegos";
+            string Matricula = "1798237"; 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(new Principal(Nombre,Matricula));
         }
     }
 }

@@ -12,9 +12,11 @@ namespace View
 {
     public partial class Principal : Form
     {
-        public Principal()
+        public Principal(string Nombre, string Matricula)
         {
             InitializeComponent();
+            textBoxNombre.Text = Nombre;
+            textBoxMatricula.Text = Matricula;
         }
     }
 }
