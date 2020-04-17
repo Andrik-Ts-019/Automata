@@ -24,7 +24,7 @@ namespace View
 
             //Creamos un objeto de tipo alfabeto_y _gramatica para acceder a sus funciones
             Alfabeto alf1 = new Alfabeto();
-            labelMuestraAlfabeto.Text = "{" + alf1.alfabetoVisible(Nombre,Matricula) + "}";
+            labelMuestraAlfabeto.Text = "{" + alf1.alfabetoVisible(Nombre.ToLower(),Matricula) + "}";
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace View
             //Validando que haya un dato deentrada en el textBoxNombre
             if (textBoxNombre.Text.Length == 0 || textBoxMatricula.Text.Length == 0)
             {
-                MessageBox.Show("No a ingresado algo en Nombre o matricula","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se a ingresado nombre o matricula o ambas","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -41,11 +41,11 @@ namespace View
 
                 if (mat == true)
                 {
-                    labelMuestraAlfabeto.Text = "{" + alf2.alfabetoVisible(textBoxNombre.Text, textBoxMatricula.Text) + "}";
+                    labelMuestraAlfabeto.Text = "{" + alf2.alfabetoVisible(textBoxNombre.Text.ToLower(), textBoxMatricula.Text) + "}";
                 }
                 else
                 {
-                    MessageBox.Show("La matricula debe tener puros números", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("La matricula debe de tener únicamente números", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }

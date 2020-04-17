@@ -59,8 +59,6 @@ namespace Controller
           en cuenta el espacio*/
         public List<char> quitarEspacio(string Nombre, string Matricula)
         {
-            //A nombre asignale su mismo contenido pero en minúsculas
-            Nombre = Nombre.ToLower();
 
             //Ingresamos el nombre a la lista alfabeto sin que se repita caracteres y sin contar al espacio
             for (int i = 0; i < Nombre.Length; i++)
@@ -114,7 +112,7 @@ namespace Controller
                 int mat = int.Parse(Matricula);
                 return true;
             }
-            catch(System.FormatException)
+            catch (System.FormatException)
             {
                 return false;
             }
