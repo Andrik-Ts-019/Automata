@@ -34,6 +34,8 @@
             this.textBoxMatricula = new System.Windows.Forms.TextBox();
             this.textBoxExpresion = new System.Windows.Forms.TextBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
+            this.labelMuestraAlfabeto = new System.Windows.Forms.Label();
+            this.labelAlfabeto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxNombre
@@ -81,18 +83,41 @@
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Location = new System.Drawing.Point(373, 271);
+            this.buttonAceptar.Location = new System.Drawing.Point(354, 271);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(140, 36);
             this.buttonAceptar.TabIndex = 5;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
+            // 
+            // labelMuestraAlfabeto
+            // 
+            this.labelMuestraAlfabeto.AutoSize = true;
+            this.labelMuestraAlfabeto.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMuestraAlfabeto.Location = new System.Drawing.Point(147, 154);
+            this.labelMuestraAlfabeto.Name = "labelMuestraAlfabeto";
+            this.labelMuestraAlfabeto.Size = new System.Drawing.Size(212, 25);
+            this.labelMuestraAlfabeto.TabIndex = 6;
+            this.labelMuestraAlfabeto.Text = "labelMuestraAlfabeto";
+            // 
+            // labelAlfabeto
+            // 
+            this.labelAlfabeto.AutoSize = true;
+            this.labelAlfabeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAlfabeto.Location = new System.Drawing.Point(56, 154);
+            this.labelAlfabeto.Name = "labelAlfabeto";
+            this.labelAlfabeto.Size = new System.Drawing.Size(83, 24);
+            this.labelAlfabeto.TabIndex = 7;
+            this.labelAlfabeto.Text = "Alfabeto:";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelAlfabeto);
+            this.Controls.Add(this.labelMuestraAlfabeto);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBoxExpresion);
             this.Controls.Add(this.textBoxMatricula);
@@ -115,6 +140,8 @@
         private System.Windows.Forms.TextBox textBoxMatricula;
         private System.Windows.Forms.TextBox textBoxExpresion;
         private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.Label labelMuestraAlfabeto;
+        private System.Windows.Forms.Label labelAlfabeto;
     }
 }
 

@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="metodos_analisis_expresion.cs" />
+    <Compile Include="alfabeto_y_gramatica.cs" />
     <Compile Include="muestra_imagenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
