@@ -14,25 +14,33 @@ namespace View
     public partial class Principal : Form
     {
 
-        public Principal(string Nombre, string Matricula)
+        public Principal(string Nombre, string Apellido, string Matricula)
         {
             InitializeComponent();
 
             //Le asignamos a los textbox Nombre y Matricula los valores por default
             textBoxNombre.Text = Nombre;
+            textBoxApellido.Text = Apellido;
             textBoxMatricula.Text = Matricula;
 
             //Creamos un objeto de tipo alfabeto_y _gramatica para acceder a sus funciones
             Alfabeto alf1 = new Alfabeto();
-            labelMuestraAlfabeto.Text = "{" + alf1.alfabetoVisible(Nombre.ToLower(),Matricula) + "}";
+            labelMuestraAlfabeto.Text = "{" + alf1.alfabetoVisible(Nombre.ToLower() + Apellido.ToLower(), Matricula) + "}";
+
+            //Muestra las expresiones i, j, w, w^I
+            Gramatica gram = new Gramatica();
+            labelj.Text = "j={ " + string.Join(",", gram.obtenernombre(Nombre.ToLower())) + " }";
+            labeli.Text = "i={ " + string.Join(",", gram.obtenerMatricula(Matricula)) + " }";
+            labelw.Text = "w={ " + string.Join(",", gram.obteneriniciales(Apellido.ToLower())) + " }";
+            labelwi.Text = "w^I={ " + string.Join(",", gram.wInvertidoStr(Apellido.ToLower())) + " }";
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             //Validando que haya un dato deentrada en el textBoxNombre
-            if (textBoxNombre.Text.Length == 0 || textBoxMatricula.Text.Length == 0)
+            if (textBoxNombre.Text.Length == 0 || textBoxMatricula.Text.Length == 0 || textBoxApellido.Text.Length == 0)
             {
-                MessageBox.Show("No se a ingresado nombre o matricula o ambas","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se a ingresado nombre, apellido y/o matricula","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -41,7 +49,7 @@ namespace View
 
                 if (mat == true)
                 {
-                    labelMuestraAlfabeto.Text = "{" + alf2.alfabetoVisible(textBoxNombre.Text.ToLower(), textBoxMatricula.Text) + "}";
+                    labelMuestraAlfabeto.Text = "{" + alf2.alfabetoVisible(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text) + "}";
                 }
                 else
                 {

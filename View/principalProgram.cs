@@ -11,11 +11,12 @@ namespace View
         [STAThread]
         static void Main()
         {
-            string Nombre = "Pablo Sebastian Ruiz Gallegos";
+            string Nombre = "Pablo Sebastian";
+            string Apellido = "Ruiz Gallegos";
             string Matricula = "1798237"; 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal(Nombre,Matricula));
+            Application.Run(new Principal(Nombre,Apellido,Matricula));
         }
     }
 }
