@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Controller
 {
@@ -18,6 +15,7 @@ namespace Controller
         //Lista que guarda la(s) inicial(es) de(l) (los) apellido(s) demanera inversa
         public List<char> wI = new List<char>();
 
+        //Constructor
         public ValidarExpresion(string Nombre, string Apellido, string Matricula)
         {
             Gramatica gramar = new Gramatica();
@@ -35,7 +33,7 @@ namespace Controller
             Stack pila = new Stack();
 
 
-        Condiciones cond = new Condiciones();
+            Condiciones cond = new Condiciones();
             //Debe de iniciar con matricula
             validadores[0] = cond.empiezaI( expresion, i);
             posicion = i.Count;
@@ -55,13 +53,16 @@ namespace Controller
             int aux = pila.Count;
 
             validadores[2] = cond.medioI( expresion, i, posicion);
-            
+
             //valida que por cada w haya dos wI
-            posicion += i.Count;      
-            validadores[3] = cond.contieneWI( expresion, wI, pila, posicion);
+            if (validadores [2] != false)
+            {
+                posicion += i.Count;
+                validadores[3] = cond.contieneWI(expresion, wI, pila, posicion);
+            }
 
+            //Valida que la expresion termina con el nombre de tal forma que se repita dos veces consecutivas
             posicion += (aux*w.Count*2);
-
             validadores[4] = cond.terminaNombre(expresion, j, posicion);
 
             return validadores;

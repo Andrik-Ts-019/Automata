@@ -89,5 +89,36 @@ namespace View
                 }
             }
         }
+
+        private void buttonGenAlfa_Click(object sender, EventArgs e)
+        {
+            //Validando que haya un dato deentrada en el textBoxNombre
+            if (textBoxNombre.Text.Length == 0 || textBoxMatricula.Text.Length == 0 || textBoxApellido.Text.Length == 0)
+            {
+                MessageBox.Show("No se a ingresado nombre, apellido y/o matricula", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Condiciones cond = new Condiciones();
+                bool mat = cond.validadorMatricula(textBoxMatricula.Text);
+
+                if (mat)
+                {
+                    Alfabeto alf2 = new Alfabeto();
+
+                    labelMuestraAlfabeto.Text = "{ " + string.Join(",", alf2.obtenerAlfabeto(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text)) + " }";
+
+                    Gramatica gram2 = new Gramatica();
+                    labelj.Text = "j={ " + string.Join(",", gram2.obtenernombre(textBoxNombre.Text.ToLower())) + " }";
+                    labeli.Text = "i={ " + string.Join(",", gram2.obtenerMatricula(textBoxMatricula.Text)) + " }";
+                    labelw.Text = "w={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 1)) + " }";
+                    labelwi.Text = "w^I={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 2)) + " }";
+                }
+                else
+                {
+                    MessageBox.Show("La matricula debe de tener únicamente números", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
     }
 }

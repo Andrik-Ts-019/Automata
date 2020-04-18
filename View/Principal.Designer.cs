@@ -42,6 +42,7 @@
             this.labeli = new System.Windows.Forms.Label();
             this.labelw = new System.Windows.Forms.Label();
             this.labelwi = new System.Windows.Forms.Label();
+            this.buttonGenAlfa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxNombre
@@ -175,11 +176,23 @@
             this.labelwi.TabIndex = 13;
             this.labelwi.Text = "labelinicialesi";
             // 
+            // buttonGenAlfa
+            // 
+            this.buttonGenAlfa.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGenAlfa.Location = new System.Drawing.Point(526, 53);
+            this.buttonGenAlfa.Name = "buttonGenAlfa";
+            this.buttonGenAlfa.Size = new System.Drawing.Size(117, 51);
+            this.buttonGenAlfa.TabIndex = 14;
+            this.buttonGenAlfa.Text = "Generar alfabeto";
+            this.buttonGenAlfa.UseVisualStyleBackColor = true;
+            this.buttonGenAlfa.Click += new System.EventHandler(this.buttonGenAlfa_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 450);
+            this.Controls.Add(this.buttonGenAlfa);
             this.Controls.Add(this.labelwi);
             this.Controls.Add(this.labelw);
             this.Controls.Add(this.labeli);
@@ -218,6 +231,7 @@
         private System.Windows.Forms.Label labeli;
         private System.Windows.Forms.Label labelw;
         private System.Windows.Forms.Label labelwi;
+        private System.Windows.Forms.Button buttonGenAlfa;
     }
 }
 

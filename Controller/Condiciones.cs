@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Controller
 {
@@ -191,7 +188,6 @@ namespace Controller
         /*Varifica que la expresion ingresada termine con el Nombre repetido dos veces de forma consecutiva*/
         public bool terminaNombre(string expresion, List<char> j, int posicion)
         {
-            Console.WriteLine("\nValor de posicion: " + posicion);
             if (expresion.Length == posicion + 2 * (j.Count))
             {
                 try
