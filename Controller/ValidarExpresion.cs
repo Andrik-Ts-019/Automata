@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,11 +30,27 @@ namespace Controller
         //Verifica que los primeros k espacios sean iguales al contenido de i
         public bool[] validar(string expresion)
         {
-            //int posicion = 0;
+            int posicion = 0;
             bool[] validadores = new bool[5] {false, false, false, false, false};
 
             Condiciones cond = new Condiciones();
-            validadores[0] = cond.empiezaI(expresion,i);
+            //Debe de iniciar con matricula
+            validadores[0] = cond.empiezaI( expresion, i);
+            posicion = i.Count;
+
+            Stack pila = new Stack();
+            //Debe detener almenos una vex w dentro de la expresión
+            pila = cond.contieneW( expresion, w, posicion);
+            if (pila.Count != 0)
+            {
+                validadores[1] = true;
+
+                foreach (var itm in pila)
+                    Console.WriteLine("Pila: " + itm);
+            }
+
+            posicion += pila.Count * w.Count;
+            validadores[2] = cond.medioI( expresion, i, posicion);
 
             return validadores;
         }

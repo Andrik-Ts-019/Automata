@@ -62,7 +62,7 @@ namespace View
                     labelw.Text = "w={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 1)) + " }";
                     labelwi.Text = "w^I={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 2)) + " }";
 
-                    ValidarExpresion vExp = new ValidarExpresion(textBoxNombre.Text,textBoxApellido.Text,textBoxMatricula.Text);
+                    ValidarExpresion vExp = new ValidarExpresion(textBoxNombre.Text.ToLower(),textBoxApellido.Text.ToLower(),textBoxMatricula.Text);
 
                     //variables booleanas para guardar el estado true false de algunas condiciones
                     bool SoloAlfabeto = cond.EnAlfabeto(textBoxExpresion.Text,alfabeto);
@@ -71,7 +71,9 @@ namespace View
                     if (textBoxExpresion.Text.Length != 0)
                     {
                         MessageBox.Show("Esta en alfabeto: " + SoloAlfabeto +
-                                        "\nInicia con la matricula: " + estados[0]);
+                                        "\nInicia con la matricula: " + estados[0] +
+                                        "\nContiene w: " + estados[1] + 
+                                        "\nContiene I en medio: " + estados[2]);
                     }
                     else
                     {
