@@ -26,16 +26,21 @@ namespace Controller
             //guarda el primer nombre de la persona
             List<char> j = new List<char>();
 
-            for (int i=0; i<Nombre.Length; i++)
+            for (int i = 0; i<Nombre.Length; i++)
             {
                 //Empesamos a recorrer el string Nombre para empezar a guardar en donde no haya espacios
                 if (!Nombre[i].Equals(' '))
                 {
-                    //Para de guardar cuando encuentres el primer espacio o llegues al limite de la cadena
-                    while (!Nombre[i].Equals(' ') && i<Nombre.Length)
+                    for (int k=i; k<Nombre.Length;k++)
                     {
-                        j.Add(Nombre[i]);
-                        i += 1;
+                        if (!Nombre[k].Equals(' '))
+                        {
+                            j.Add(Nombre[k]);
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                     break;
                 }
