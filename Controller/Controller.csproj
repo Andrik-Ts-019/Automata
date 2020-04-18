@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alfabeto.cs" />
+    <Compile Include="ValidarExpresion.cs" />
     <Compile Include="Condiciones.cs" />
     <Compile Include="Gramatica.cs" />
-    <Compile Include="muestra_imagenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

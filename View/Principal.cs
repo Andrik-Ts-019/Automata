@@ -13,13 +13,6 @@ namespace View
 {
     public partial class Principal : Form
     {
-
-        //Creamos la lista que tendra a nuestro alfabeto
-        List<char> alfabeto = new List<char>();
-
-        //variables booleanas para guardar el estado true false de algunas condiciones
-        bool SoloAlfabeto;
-
         public Principal(string Nombre, string Apellido, string Matricula)
         {
             InitializeComponent();
@@ -50,11 +43,15 @@ namespace View
             }
             else
             {
-                Alfabeto alf2 = new Alfabeto();
-                bool mat = alf2.validadorMatricula(textBoxMatricula.Text);
+                Condiciones cond = new Condiciones();
+                bool mat = cond.validadorMatricula(textBoxMatricula.Text);
 
                 if (mat)
                 {
+                    //Creamos la lista que tendra a nuestro alfabeto
+                    List<char> alfabeto = new List<char>();
+
+                    Alfabeto alf2 = new Alfabeto();
                     alfabeto = alf2.obtenerAlfabeto(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text);
 
                     labelMuestraAlfabeto.Text = "{ " + string.Join(",", alf2.obtenerAlfabeto(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text)) + " }";
@@ -65,12 +62,16 @@ namespace View
                     labelw.Text = "w={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 1)) + " }";
                     labelwi.Text = "w^I={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 2)) + " }";
 
-                    Condiciones cond = new Condiciones();
-                    SoloAlfabeto = cond.EnAlfabeto(textBoxExpresion.Text,alfabeto);
+                    ValidarExpresion vExp = new ValidarExpresion(textBoxNombre.Text,textBoxApellido.Text,textBoxMatricula.Text);
+
+                    //variables booleanas para guardar el estado true false de algunas condiciones
+                    bool SoloAlfabeto = cond.EnAlfabeto(textBoxExpresion.Text,alfabeto);
+                    bool [] estados = vExp.validar(textBoxExpresion.Text);
 
                     if (textBoxExpresion.Text.Length != 0)
                     {
-                        MessageBox.Show("Esta en alfabeto: " + SoloAlfabeto);
+                        MessageBox.Show("Esta en alfabeto: " + SoloAlfabeto +
+                                        "\nInicia con la matricula: " + estados[0]);
                     }
                     else
                     {

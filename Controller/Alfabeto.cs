@@ -68,20 +68,5 @@ namespace Controller
             }
             return alfabeto;
         }
-
-        /*Aprovecha el try y catch para saber si matricula está constituida de puros números, si esto es verdadero retorna true, en caso contrario retorna 
-          false*/
-        public bool validadorMatricula(string Matricula)
-        {
-            try
-            {
-                int mat = int.Parse(Matricula);
-                return true;
-            }
-            catch (System.FormatException)
-            {
-                return false;
-            }
-        }
     }
 }

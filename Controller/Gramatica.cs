@@ -19,8 +19,8 @@ namespace Controller
             return i;
         }
 
-        /*Devuelve una list que unicamente contiene el nombre de la persona guardando los primeros caracteres antes de un espacio, sin incluir al espacio, 
-          iniciando en la pocision 0*/
+        /*Devuelve una list que unicamente contiene el primer nombre de la persona guardando los primeros caracteres antes de un espacio, 
+          sin incluir al espacio, iniciando en la pocision 0*/
         public List<char> obtenernombre(string Nombre)
         {
             //guarda el primer nombre de la persona
@@ -74,9 +74,11 @@ namespace Controller
 
             switch (opc)
             {
+                //retorna iniciales segun el orden en que se ingresó de izquierda a derecha
                 case 1:
                     return w;
 
+                //retorna iniciales en forma invertida segun el orden en que se ingresó de izquierda a derecha
                 case 2:
                     return listaInvertida(w);
                 
