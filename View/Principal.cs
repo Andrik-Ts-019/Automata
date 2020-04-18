@@ -14,6 +14,12 @@ namespace View
     public partial class Principal : Form
     {
 
+        //Creamos la lista que tendra a nuestro alfabeto
+        List<char> alfabeto = new List<char>();
+
+        //variables booleanas para guardar el estado true false de algunas condiciones
+        bool SoloAlfabeto;
+
         public Principal(string Nombre, string Apellido, string Matricula)
         {
             InitializeComponent();
@@ -25,7 +31,7 @@ namespace View
 
             //Creamos un objeto de tipo alfabeto_y _gramatica para acceder a sus funciones
             Alfabeto alf1 = new Alfabeto();
-            labelMuestraAlfabeto.Text = "{" + alf1.alfabetoVisible(Nombre.ToLower() + Apellido.ToLower(), Matricula) + "}";
+            labelMuestraAlfabeto.Text = "{ " + string.Join(",", alf1.obtenerAlfabeto(Nombre.ToLower() + Apellido.ToLower(), Matricula)) + " }";
 
             //Muestra las expresiones i, j, w, w^I
             Gramatica gram = new Gramatica();
@@ -47,14 +53,30 @@ namespace View
                 Alfabeto alf2 = new Alfabeto();
                 bool mat = alf2.validadorMatricula(textBoxMatricula.Text);
 
-                if (mat == true)
+                if (mat)
                 {
-                    labelMuestraAlfabeto.Text = "{" + alf2.alfabetoVisible(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text) + "}";
+                    alfabeto = alf2.obtenerAlfabeto(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text);
+
+                    labelMuestraAlfabeto.Text = "{ " + string.Join(",", alf2.obtenerAlfabeto(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text)) + " }";
+
                     Gramatica gram2 = new Gramatica();
                     labelj.Text = "j={ " + string.Join(",", gram2.obtenernombre(textBoxNombre.Text.ToLower())) + " }";
                     labeli.Text = "i={ " + string.Join(",", gram2.obtenerMatricula(textBoxMatricula.Text)) + " }";
                     labelw.Text = "w={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 1)) + " }";
                     labelwi.Text = "w^I={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 2)) + " }";
+
+                    Condiciones cond = new Condiciones();
+                    SoloAlfabeto = cond.EnAlfabeto(textBoxExpresion.Text,alfabeto);
+
+                    if (textBoxExpresion.Text.Length != 0)
+                    {
+                        MessageBox.Show("Esta en alfabeto: " + SoloAlfabeto);
+                    }
+                    else
+                    {
+                        MessageBox.Show("USTED INGRESO NADA","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    
                 }
                 else
                 {

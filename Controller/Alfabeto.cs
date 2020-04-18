@@ -11,40 +11,6 @@ namespace Controller
         //Creamos la lista que tendra a nuestro alfabeto
         List<char> alfabeto = new List<char>();
 
-        /*Función que recibiendo el Nombre y Matricula devuelve un string que contiene los caracteres no repetidos que componen a Nombre y a Matricula 
-          separados por comas*/
-        public string alfabetoVisible(string Nombre, string Matricula)
-        {
-            alfabeto = obtenerAlfabeto(Nombre, Matricula);
-
-            int i, insertComa = 1, insertNum = 0;
-            string AlfabetoVisible = "";
-
-            //For para crear una cadena visible en el label
-            for (i = 0; i < alfabeto.Count; i++)
-            {
-                try
-                {
-                    if (i == alfabeto.Count - 1)
-                    {
-                        AlfabetoVisible = AlfabetoVisible.Insert(insertNum, alfabeto[i].ToString());
-                    }
-                    else
-                    {
-                        AlfabetoVisible = AlfabetoVisible.Insert(insertNum, alfabeto[i].ToString());
-                        insertNum += 2;
-
-                        AlfabetoVisible = AlfabetoVisible.Insert(insertComa, ",");
-                        insertComa += 2;
-                    }
-
-                }
-                catch (System.ArgumentOutOfRangeException) { continue; }
-            }
-
-            return AlfabetoVisible;
-        }
-
         /*Recibiendo como entrada dos string (Nombre y matricula) la función devuelve una lista de caracteres no repetidos que se encuentran 
           en el nombre y la matrícula sin tomar en cuenta el espacio*/
         public List<char> obtenerAlfabeto(string Nombre, string Matricula)
