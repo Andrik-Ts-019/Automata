@@ -51,32 +51,30 @@ namespace Controller
             }
         }
 
-        //Verifica que los primeros k espacios sean iguales al contenido de i
+        /*Verifica que los primeros k espacios sean iguales al contenido de i*/
         public bool empiezaI(string expresion, List<char> i)
         {
-            bool validador1 = false;
-
             try
             {
                 for (int k = 0; k < i.Count; k++)
                 {
                     if (!expresion[k].Equals(i[k]))
                     {
-                        return validador1;
+                        return false;
                     }
                 }
-                return !validador1;
+                return true;
             }
             catch (System.IndexOutOfRangeException)
             {
-                return validador1;
+                return false;
             }
         }
 
         /*Devuelve un stack que va aumentando de contenido segun la cantidd de w que se encuentren de forma consecutiva en la expresion*/
         public Stack contieneW(string expresion, List<char> w, int posicion)
         {
-            Stack pila = new Stack();
+            Stack pila2 = new Stack();
 
             //Indicador que nos dirá cuantas w meter a la pila
             string inicialesapellido = "";
@@ -96,25 +94,26 @@ namespace Controller
                             //En caso de tener las iniciales consecutivas agregamos una w a la pila
                             if (inicialesapellido.Equals(string.Join("", w)))
                             {
-                                pila.Push("w");
+                                pila2.Push("w");
                                 inicialesapellido = "";
                             }
                         }
                         else
                         {
-                            return pila;
+                            return pila2;
                         }
                     }
                 }
                 catch (System.IndexOutOfRangeException)
                 {
-                    return pila;
+                    return pila2;
                 }
                 i += w.Count;
             }
-            return pila;
+            return pila2;
         }
 
+        /*Verifica que i se encuentre cerca de la mediacion de la cadena */
         public bool medioI(string expresion, List<char> i, int posicion)
         {
             bool validador2 = false;
@@ -135,6 +134,65 @@ namespace Controller
             {
                 return validador2;
             }
+        }
+
+        /*Verifica que setenga wI de tal forma que por cada w haya dos wI*/
+        public bool contieneWI(string expresion, List<char> wI, Stack p, int posicion)
+        {
+            Stack pila = new Stack();
+            string aux = "";
+            pila = p;
+
+            if (pila.Count != 0)
+            {
+                try
+                {
+                    int count = posicion + 2 * (p.Count * wI.Count);
+                    for (int i = posicion; i < count;)
+                    { 
+                        for (int j = 0; j < wI.Count; j++)
+                        {
+                            if (expresion[i + j].Equals(wI[j]))
+                            {
+                                aux += wI[j];
+                                if (aux == string.Join("", wI) + string.Join("", wI))
+                                {
+                                    Console.WriteLine("\n3.-Valor de aux: " + aux);
+                                    pila.Pop();
+                                    aux = "";
+                                }
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        i += wI.Count;
+                    }
+                }
+                catch (System.IndexOutOfRangeException)
+                {
+                    return false;
+                }
+                if (pila.Count == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /*Varifica que la expresion ingresada termine con el Nombre repetido dos veces de forma consecutiva*/
+        public bool terminaNombre(string expresion,List<char> j, int posicion)
+        {
+            return false;
         }
     }
 }

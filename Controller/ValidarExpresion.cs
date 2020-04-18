@@ -32,25 +32,28 @@ namespace Controller
         {
             int posicion = 0;
             bool[] validadores = new bool[5] {false, false, false, false, false};
+            Stack pila = new Stack();
 
-            Condiciones cond = new Condiciones();
+
+        Condiciones cond = new Condiciones();
             //Debe de iniciar con matricula
             validadores[0] = cond.empiezaI( expresion, i);
             posicion = i.Count;
 
-            Stack pila = new Stack();
-            //Debe detener almenos una vex w dentro de la expresión
+            
+            //Debe detener almenos un w dentro de la expresión
             pila = cond.contieneW( expresion, w, posicion);
             if (pila.Count != 0)
             {
-                validadores[1] = true;
-
-                foreach (var itm in pila)
-                    Console.WriteLine("Pila: " + itm);
+                validadores[1] = true;                
             }
 
+            //valida si tiene matricula a casi a mediacion de la expresion
             posicion += pila.Count * w.Count;
             validadores[2] = cond.medioI( expresion, i, posicion);
+
+            posicion += i.Count;
+            validadores[3] = cond.contieneWI( expresion, wI, pila, posicion);
 
             return validadores;
         }

@@ -73,7 +73,8 @@ namespace View
                         MessageBox.Show("Esta en alfabeto: " + SoloAlfabeto +
                                         "\nInicia con la matricula: " + estados[0] +
                                         "\nContiene w: " + estados[1] + 
-                                        "\nContiene I en medio: " + estados[2]);
+                                        "\nContiene I en medio: " + estados[2] +
+                                        "\nContiene 2 wI por cada w: " + estados[3]);
                     }
                     else
                     {
