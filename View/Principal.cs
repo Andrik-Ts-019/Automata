@@ -31,8 +31,8 @@ namespace View
             Gramatica gram = new Gramatica();
             labelj.Text = "j={ " + string.Join(",", gram.obtenernombre(Nombre.ToLower())) + " }";
             labeli.Text = "i={ " + string.Join(",", gram.obtenerMatricula(Matricula)) + " }";
-            labelw.Text = "w={ " + string.Join(",", gram.obteneriniciales(Apellido.ToLower())) + " }";
-            labelwi.Text = "w^I={ " + string.Join(",", gram.wInvertidoStr(Apellido.ToLower())) + " }";
+            labelw.Text = "w={ " + string.Join(",", gram.obteneriniciales(Apellido.ToLower(),1)) + " }";
+            labelwi.Text = "w^I={ " + string.Join(",", gram.obteneriniciales(Apellido.ToLower(),2)) + " }";
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
@@ -50,6 +50,11 @@ namespace View
                 if (mat == true)
                 {
                     labelMuestraAlfabeto.Text = "{" + alf2.alfabetoVisible(textBoxNombre.Text.ToLower() + textBoxApellido.Text.ToLower(), textBoxMatricula.Text) + "}";
+                    Gramatica gram2 = new Gramatica();
+                    labelj.Text = "j={ " + string.Join(",", gram2.obtenernombre(textBoxNombre.Text.ToLower())) + " }";
+                    labeli.Text = "i={ " + string.Join(",", gram2.obtenerMatricula(textBoxMatricula.Text)) + " }";
+                    labelw.Text = "w={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 1)) + " }";
+                    labelwi.Text = "w^I={ " + string.Join(",", gram2.obteneriniciales(textBoxApellido.Text.ToLower(), 2)) + " }";
                 }
                 else
                 {
