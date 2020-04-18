@@ -82,14 +82,14 @@
             // textBoxExpresion
             // 
             this.textBoxExpresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxExpresion.Location = new System.Drawing.Point(107, 318);
+            this.textBoxExpresion.Location = new System.Drawing.Point(71, 318);
             this.textBoxExpresion.Name = "textBoxExpresion";
-            this.textBoxExpresion.Size = new System.Drawing.Size(535, 26);
+            this.textBoxExpresion.Size = new System.Drawing.Size(816, 26);
             this.textBoxExpresion.TabIndex = 4;
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Location = new System.Drawing.Point(302, 365);
+            this.buttonAceptar.Location = new System.Drawing.Point(405, 359);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(140, 36);
             this.buttonAceptar.TabIndex = 5;
@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 450);
+            this.ClientSize = new System.Drawing.Size(952, 450);
             this.Controls.Add(this.labelwi);
             this.Controls.Add(this.labelw);
             this.Controls.Add(this.labeli);

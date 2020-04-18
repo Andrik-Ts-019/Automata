@@ -139,11 +139,11 @@ namespace Controller
         /*Verifica que setenga wI de tal forma que por cada w haya dos wI*/
         public bool contieneWI(string expresion, List<char> wI, Stack p, int posicion)
         {
-            Stack pila = new Stack();
+            Stack pila2 = new Stack();
             string aux = "";
-            pila = p;
+            pila2 = p;
 
-            if (pila.Count != 0)
+            if (pila2.Count != 0)
             {
                 try
                 {
@@ -157,8 +157,7 @@ namespace Controller
                                 aux += wI[j];
                                 if (aux == string.Join("", wI) + string.Join("", wI))
                                 {
-                                    Console.WriteLine("\n3.-Valor de aux: " + aux);
-                                    pila.Pop();
+                                    pila2.Pop();
                                     aux = "";
                                 }
                             }
@@ -174,7 +173,7 @@ namespace Controller
                 {
                     return false;
                 }
-                if (pila.Count == 0)
+                if (pila2.Count == 0)
                 {
                     return true;
                 }
@@ -190,9 +189,35 @@ namespace Controller
         }
 
         /*Varifica que la expresion ingresada termine con el Nombre repetido dos veces de forma consecutiva*/
-        public bool terminaNombre(string expresion,List<char> j, int posicion)
+        public bool terminaNombre(string expresion, List<char> j, int posicion)
         {
-            return false;
+            Console.WriteLine("\nValor de posicion: " + posicion);
+            if (expresion.Length == posicion + 2 * (j.Count))
+            {
+                try
+                {
+                    for (int i = posicion; i < expresion.Length;)
+                    {
+                        for (int k = 0; k < j.Count; k++)
+                        {
+                            if (!expresion[i + k].Equals(j[k]))
+                            {
+                                return false;
+                            }
+                        }
+                        i += j.Count;
+                    }
+                    return true;
+                }
+                catch (System.IndexOutOfRangeException)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -50,10 +50,19 @@ namespace Controller
 
             //valida si tiene matricula a casi a mediacion de la expresion
             posicion += pila.Count * w.Count;
-            validadores[2] = cond.medioI( expresion, i, posicion);
 
-            posicion += i.Count;
+            //Variable que guarda el count de la pila pues se me pierde ese valor y la pila se queda sin nada :v
+            int aux = pila.Count;
+
+            validadores[2] = cond.medioI( expresion, i, posicion);
+            
+            //valida que por cada w haya dos wI
+            posicion += i.Count;      
             validadores[3] = cond.contieneWI( expresion, wI, pila, posicion);
+
+            posicion += (aux*w.Count*2);
+
+            validadores[4] = cond.terminaNombre(expresion, j, posicion);
 
             return validadores;
         }
